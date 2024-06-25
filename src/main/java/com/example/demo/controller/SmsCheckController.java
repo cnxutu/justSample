@@ -1,12 +1,8 @@
 package com.example.demo.controller;
 
-import com.example.demo.common.config.rsa.RSAEncrypted;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpServletRequest;
+import com.example.demo.common.config.rsa.annotion.RSAEncryptedParam;
+import com.example.demo.common.config.rsa.query.RsaQuery;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author: xutu
@@ -20,11 +16,20 @@ public class SmsCheckController {
     @RequestMapping(value = "/validate", method = RequestMethod.GET)
     public String validate(
             @RequestParam("mobilePhone") String mobilePhone,
-            @RequestParam("sensitiveData") @RSAEncrypted String sensitiveData) {
+            @RequestParam("sensitiveData") @RSAEncryptedParam String sensitiveData) {
 
 
         return sensitiveData;
     }
+
+
+    @RequestMapping(value = "/validateBody", method = RequestMethod.POST)
+    public String validateBody(@RequestBody RsaQuery rsaQuery) {
+
+
+        return rsaQuery.toString();
+    }
+
 
 
 }

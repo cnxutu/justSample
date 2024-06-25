@@ -16,9 +16,9 @@ public class DemoApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(DemoApplication.class, args);
         System.out.println("Inspecting the beans provided by Spring Boot:");
-        String[] beanNames = ctx.getBeanDefinitionNames();
-        for (String beanName : beanNames) {
-            System.out.println(beanName);
-        }
+//        String[] beanNames = ctx.getBeanDefinitionNames();
+//        for (String beanName : beanNames) {
+//            System.out.println(beanName);
+//        }
     }
 }

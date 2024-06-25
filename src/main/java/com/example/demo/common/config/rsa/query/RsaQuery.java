@@ -1,8 +1,7 @@
 package com.example.demo.common.config.rsa.query;
 
-import com.example.demo.common.config.rsa.RSAEncrypted;
+import com.example.demo.common.config.rsa.annotion.RSAEncrypted;
 import lombok.Data;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author: xutu
@@ -11,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Data
 public class RsaQuery {
 
-    private String mobilePhone;
-
-//    @RSAEncrypted
+    @RSAEncrypted
     private String sensitiveData;
+
+    private String mobilePhone;
 
 
 }

@@ -9,14 +9,18 @@
         <!--        <version>2.7.15</version>-->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+
     <groupId>com.example</groupId>
-    <artifactId>demo1</artifactId>
+    <artifactId>justSample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo1</name>
     <description>demo1</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -29,11 +33,11 @@
             <optional>true</optional>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-autoconfigure</artifactId>-->
-<!--            <version>1.5.9.RELEASE</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-autoconfigure</artifactId>-->
+        <!--            <version>1.5.9.RELEASE</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -52,29 +56,29 @@
             <version>5.4.0</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.apache.shardingsphere</groupId>-->
-<!--            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
-<!--            <version>4.1.1</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.shardingsphere</groupId>-->
+        <!--            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
+        <!--            <version>4.1.1</version>-->
+        <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>org.mybatis</groupId>-->
-<!--            <artifactId>mybatis-spring</artifactId>-->
-<!--            <version>3.0.2</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.mybatis</groupId>-->
+        <!--            <artifactId>mybatis-spring</artifactId>-->
+        <!--            <version>3.0.2</version>-->
+        <!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-<!--        <dependency>-->
-<!--            <groupId>org.mybatis</groupId>-->
-<!--            <artifactId>mybatis</artifactId>-->
-<!--            <version>3.4.6</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>mysql</groupId>-->
-<!--            <artifactId>mysql-connector-java</artifactId>-->
-<!--            <scope>runtime</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.mybatis</groupId>-->
+        <!--            <artifactId>mybatis</artifactId>-->
+        <!--            <version>3.4.6</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>mysql</groupId>-->
+        <!--            <artifactId>mysql-connector-java</artifactId>-->
+        <!--            <scope>runtime</scope>-->
+        <!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
         <dependency>
@@ -89,17 +93,17 @@
             <version>1.2.9</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>tk.mybatis</groupId>-->
-<!--            <artifactId>mapper</artifactId>-->
-<!--            <version>3.5.0</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>tk.mybatis</groupId>-->
+        <!--            <artifactId>mapper</artifactId>-->
+        <!--            <version>3.5.0</version>-->
+        <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>tk.mybatis</groupId>-->
-<!--            <artifactId>mapper</artifactId>-->
-<!--            <version>4.2.3</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>tk.mybatis</groupId>-->
+        <!--            <artifactId>mapper</artifactId>-->
+        <!--            <version>4.2.3</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>mysql</groupId>
@@ -146,7 +150,6 @@
             </properties>
         </profile>
     </profiles>
-
 
 
     <build>

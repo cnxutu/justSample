@@ -27,6 +27,7 @@ public class RSAUtil {
 
     public static byte[] decrypt(byte[] data, PrivateKey privateKey) throws Exception {
         Cipher cipher = Cipher.getInstance("RSA");
+//        Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
         cipher.init(Cipher.DECRYPT_MODE, privateKey);
         return cipher.doFinal(data);
     }
@@ -49,6 +50,7 @@ public class RSAUtil {
         Optional<String> result = Stream.of(validatedSeg.split("@"))
                 .reduce((first, second) -> second);
         if (ObjectUtil.equals(result.get(), mobilePhone)) {
+            System.out.println("tow params are in match.");
             return;
         } else {
             throw new IllegalArgumentException("Request param error.");
@@ -62,8 +64,9 @@ public class RSAUtil {
 
         String encryptedData1 = "E5X5HswJ2ErdTwwKxK5M5cJb7xPT9WMXma4PtQoQC9PbnywO6Px9DZbDRThBoHgRBRqgPxvQcJc7gPjCPZ4IVggtdJNo3yVkzV96E8tMY9jD8H/s/nQD8oCAHpN0XFUPK8zfzK4cqddTosWL9Pw9RQV9zC6U/sdDGTZ2doK8dFU9X43hLflrq/6J+uvDo/+mB6GburGO3M0OOXFR5fXJFBTFlzwNVwCHRPWCf2131+TPBlaOi0d2oLr8kJNTV9Og8kNpasDvXVfIwwpEv3PMelWEbLc+ZlJWMPvHLltX0+o/mVbJgYK9NLOEx6mc1HgXQzgg15IreMvX/O0zarX0qg==";
 //        String encryptedData = "c/Pk22HIWQURMRAREFt5Mfrbu/QPXVuyGGuWDVht2E5QwDFa/EDVBHRN3OmHWH+OiM7P3TyDSotLGIXU2ucQ5Ves3zj5p9jWhKhm4hY9jCIWnJebcNVUi/aF8spP5XBAqMfFlL0o8fO8SH0I/LLhCjND7wxCZz9OtFKgPl0lRo1KzA9lXeb7IgtSbDcj5ejoe1RpysuglvBXOCD5AjD93ApWNtnHUlyEb3Mkkbau0SQJw0PyrmOsuPiXIQFOMu7ZCxrU3F6BSeX05PcDxguhw/A/pHirqA6IK8TAzHahvJ5O+Hg2RU4pTsrdMl89PnM+90Ldy0fQ+qZkouEC7poyOw==";
-        String encryptedData = "Hwox+Z23kdx2iJj4pxmKY3ZTZP2XrfYlmMxdz2KCjqk49B2SXDDJ3Ife4T/fOTreNyHvCmDObf1b2d3DDnC2RJRq7yDEeyQH59cMZDchCqx1si/Dx8y4DSIrquf5+enT/qv6Q+grhQvn6VnwvYhka6jJwaGP4L7g/OBvcL5O+IEUPdt6TiTXd7xOdpnHngsTz3x9rKyxbZ1cIRdNt6BSKGDVTseSwUlCVneURM5qBdLAzD7EcOX0aOEqRjzJxON/l+iITDuvuQxWqSB71aV4ZPtYoIxJAz418SH6tfjLirc8oQVvLtDm1TxemydfXUMD6RLHw9C5X+OEDDpcTSTfpg==";
-        String bbbbbbbbbbbbb = "E5X5HswJ2ErdTwwKxK5M5cJb7xPT9WMXma4PtQoQC9PbnywO6Px9DZbDRThBoHgRBRqgPxvQcJc7gPjCPZ4IVggtdJNo3yVkzV96E8tMY9jD8H/s/nQD8oCAHpN0XFUPK8zfzK4cqddTosWL9Pw9RQV9zC6U/sdDGTZ2doK8dFU9X43hLflrq/6J+uvDo/+mB6GburGO3M0OOXFR5fXJFBTFlzwNVwCHRPWCf2131+TPBlaOi0d2oLr8kJNTV9Og8kNpasDvXVfIwwpEv3PMelWEbLc+ZlJWMPvHLltX0+o/mVbJgYK9NLOEx6mc1HgXQzgg15IreMvX/O0zarX0qg==";
+        String encryptedData2 = "Hwox+Z23kdx2iJj4pxmKY3ZTZP2XrfYlmMxdz2KCjqk49B2SXDDJ3Ife4T/fOTreNyHvCmDObf1b2d3DDnC2RJRq7yDEeyQH59cMZDchCqx1si/Dx8y4DSIrquf5+enT/qv6Q+grhQvn6VnwvYhka6jJwaGP4L7g/OBvcL5O+IEUPdt6TiTXd7xOdpnHngsTz3x9rKyxbZ1cIRdNt6BSKGDVTseSwUlCVneURM5qBdLAzD7EcOX0aOEqRjzJxON/l+iITDuvuQxWqSB71aV4ZPtYoIxJAz418SH6tfjLirc8oQVvLtDm1TxemydfXUMD6RLHw9C5X+OEDDpcTSTfpg==";
+
+        String encryptedData = "cgzbk46GJKuW0YyyKUSl2SCXEsevsl3AMneb0kpfo5+L9ad5KeI8IUFzWJrZVytBoEZBIcz/282EI/UApqDHmcY20ARwF1+GCZUNj68EwX9+8nT/ZLyU7qoYN/u/9SDxlml87IqbGu+LJTa+n3+NITElgEpUIuCgd0x85SwxeLleJegCYT0amRErgbRztyKPyh+19iuc/bk/aEJsvcadz/4P+px8+Rqj2H2qawotWGJOkOaNUZcChcfbFgWLbCK5W7ifp5fbkKPxAArIV8Vdq0bEnR2Wdj6wjaz8k9V/t/3oHp8vFkEdfVwvk+plH4YmsziWJ4cnYiNK6fmyDYkbSw==";
 
 
 //        try {
