@@ -1,0 +1,12 @@
+spring:
+    datasource:
+        mysql:
+            type: com.alibaba.druid.pool.DruidDataSource
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://10.10.0.25:3306/workflow?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+            username: root
+            password: xzl12345+
+
+
+#    props:
+#      sql-show: true

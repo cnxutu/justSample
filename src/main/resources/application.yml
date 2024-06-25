@@ -1,0 +1,69 @@
+
+spring:
+  profiles:
+    active: dev
+
+sms-verification:
+  privatekey: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCS5SEvytTesRjhTgChM0XaEU7LGk63whbeHQaTwmptSC68S5+NGLkk/II1Dq10GeNIDxEWhQSDEqPkIXg5e2/vMEWgHMd1jQZyT4FXrn40oMmxZZQfTN3kp2CRgRHNWNuA7UKppQRbJn1V29pRlwTXwtuMo4HbZ3T1siKcRO3sk6nfySR0LWMmCp00Y5doHlJUEzcoxn7dv3UZ2SfpZ2Ll0diCS5f6O2sRnshYZ7dmsMJKO1Q9Djzej1zaLeaJ7wp1tfag82ZCEgPM5Rb37W+Q6w5mdMHxNFdo96v5kXStwVRn8/LkFHGaLZPlEDcNNqxjQzP4r8EnzxZl12wDyQhTAgMBAAECggEBAIrRunEd79mb53VUb8fnWoXggWPzMpz58P5q08JjoowwAOq1VMzUpnNLpglaG5VyuZVpl65+emsb/IIlFybLfla+ea38RIrUgVkZxZQFNQOrR7A73KVP0Qq7Gsmm/hnfdWD711nWtq0lTKENKd6dJ1h3r1/TTW748FEYzRh9E5PT7z9uosU8TSlxdSiT9TNha1U0xRQXUbFylRdEtEQt61R8Ex29JapTxizpLL8Jp7+3vU5XgYmaIXq5TN2qI8fxo3BWsh1jMrj3yMYhXf+pvA8SczyzQduJHisH4Hm5yAKUE6C8XvOaEh09fKPRshiJ5sHKNI8RZx1c/FEzDNkquPECgYEA2nFzvGVKvhvbnB0gjOtrr1gtg1lFQTsWtFOA7DDim4Qxy7dsdRADj0rEvgWhmg30P6bwgSi378zYmL5M/pdnBFqvJIXEve4/G4PD4iyBpTwvpgGVPhG7J4YMkt43uc8dmahnJPs32abQNJjjgk7oaoOvmgDZOtKnU/O6Mn4/Zk8CgYEArCaPqYhBSDhxQrzmgsfulcM+eIZ7Y4LQaC3t6COdeVcpbA+CpBIAK7smBcJXgk3eGCbsFjXHJ+O6+91rEG4MiTW6YifsoS8mYyGyORjuqguovWwYp0S0k9Lr+fV8uYVMmIt8PSPw1P77OGNnM+Uimli7VJ7SD1P0yZIvFtU9gL0CgYB4JjThZ9lfjZUSXhb8S7T0QgzulRh5k5WeY9uijhTmMyTshxwZm1BJ7XcfiZtkT86LgDgC4rGhLUvpX6qb0gzwoSx6azVWvodpi+UfLxm0F9GhfndnJ3uIdrvNwHpoMhp23OC2v5LtnUoh1AI3N02w4HOiwlq5dwpgK8u7YCNhEwKBgHNJS7JcJmPoMKlh+fkhTX0MCN0MKrvEki8Cey2YFFB7d6j/ZhzcVTL0HQ2ETbhcz1xbTIW/NAVZtBISAS46lLiau5waYpS7D7kZitJECSjlr/ZS2tvB3jCU8yUtKn7PbzFFUEldtV3e+HyVzTpqu9ajj6imx8QuFGOdO13OJmb9AoGBAIg1fWMEybVDz0yYkSi/Mxbl2mYxCcp+Fg+KSuAzRmA2KzlBG+8tF8R1VpnD0Pov05hRINIPjf/oJ2jCvmPpZdvIjKNDGEBMWLIHn/JPW0YeJniruTyPfHQ4SZTsmpA8NGtIR6Ihej6W46STaXreHEOLmgN0DqkmJ2CgrZboMrt0
+
+
+third:
+  ios:
+    wb:
+      wechat:
+        appId: wxb4cc96c9bc668c9a
+        appSecret: c9d1dbd1e9dbe5a9549cbe0f13b9e249
+    wy:
+      wechat:
+        appId: wxa067fe88bf63d05a
+        appSecret: 10a9c01e7cb9738d1459744fc6b639a8
+  adroid:
+    wb:
+      wechat:
+        appId: wxb4cc96c9bc668c9a
+        appSecret: c9d1dbd1e9dbe5a9549cbe0f13b9e249
+    wy:
+      wechat:
+        appId: wx6eb42d11a18b3abe
+        appSecret: f3cf690df2816c77fcd252295e660587
+
+
+
+#mybatis
+#mybatis:
+#  #Mapper.xml所在的位置
+#  mapper-locations: classpath:mapping/*.xml
+#  #entity扫描的包名
+#  type-aliases-package: com.example.demo.pojo.po
+#mybatis.configuration.cache-enabled=true
+#mapper:
+#  mappers: com.xzl.bullserver11.domain.tk.TKMapper
+#  before: true
+
+#spring:
+#  shardingsphere:
+#    datasource:
+#      names: ds0
+#      ds0:
+#        type: com.zaxxer.hikari.HikariDataSource
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        jdbc-url: jdbc:mysql://10.10.0.25:3306/workflow?characterEncoding=utf-8&useOldAliasMetadataBehavior=true&allowMultiQueries=true&useAffectedRows=true&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=Asia/Shanghai
+#        username: root
+#        password: xzl12345+
+
+
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.zaxxer.hikari.HikariDataSource
+#    url: jdbc:mysql://10.10.0.25:3306/workflow?allowMultiQueries=true&autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+#    username: root
+#    password: xzl12345+
+
+
+server:
+  port: 8088
+
+
+logging:
+  level:
+    com.example.demo.dao: debug
