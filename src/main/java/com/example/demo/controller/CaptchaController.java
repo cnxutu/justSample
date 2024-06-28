@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
@@ -34,8 +35,10 @@ public class CaptchaController {
 
         String capText = defaultKaptcha.createText();
         System.out.println(capText);
-        request.getSession().setAttribute("captcha", capText);
-
+        HttpSession session = request.getSession();
+        // 设置session时间 15分钟
+        session.setMaxInactiveInterval(15 * 60);
+        session.setAttribute("captcha", capText);
         BufferedImage bi = defaultKaptcha.createImage(capText);
         ImageIO.write(bi, "jpg", response.getOutputStream());
     }
@@ -46,6 +49,7 @@ public class CaptchaController {
         if (sessionCaptcha != null && sessionCaptcha.equals(captcha)) {
             return "Captcha validation success!";
         } else {
+            request.getSession().invalidate();
             return "Captcha validation failed!";
         }
     }
