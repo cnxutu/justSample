@@ -45,7 +45,9 @@ public class CaptchaController {
 
     @PostMapping("/validateCaptcha")
     public String validateCaptcha(@RequestParam("captcha") String captcha, HttpServletRequest request) {
-        String sessionCaptcha = (String) request.getSession().getAttribute("captcha");
+        HttpSession session = request.getSession();
+        String sessionCaptcha = (String) session.getAttribute("captcha");
+        session.invalidate();
         if (sessionCaptcha != null && sessionCaptcha.equals(captcha)) {
             return "Captcha validation success!";
         } else {

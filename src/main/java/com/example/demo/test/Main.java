@@ -11,6 +11,11 @@ public class Main {
     public static void main(String[] args) {
 
 
+        String s1 = "03a27d24-e2d4-4606-8194-f64f2df71f39@1719293494518@17512595645";
+
+        String result = s1.split("@")[0];
+        System.out.println(result);
+
         String s = "爱丽丝,霍华德,科鲁兹";
         if (s.contains("霍华德")){
             System.out.println(s.replace("霍华德","贾斯汀"));
