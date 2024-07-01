@@ -51,7 +51,6 @@ public class CaptchaController {
         if (sessionCaptcha != null && sessionCaptcha.equals(captcha)) {
             return "Captcha validation success!";
         } else {
-            request.getSession().invalidate();
             return "Captcha validation failed!";
         }
     }
