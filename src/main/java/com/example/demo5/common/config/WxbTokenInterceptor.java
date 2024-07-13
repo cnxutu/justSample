@@ -1,8 +1,8 @@
 package com.example.demo5.common.config;
 
-import com.xzl.wxbserver.common.constant.HeaderConstant;
-import com.xzl.wxbserver.common.constant.UrlConstant;
-import com.xzl.wxbserver.service.IWxbAuthService;
+import com.example.demo5.common.constant.HeaderConstant;
+import com.example.demo5.common.constant.UrlConstant;
+import com.example.demo5.service.IWxbAuthService;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.slf4j.Logger;

@@ -1,13 +1,13 @@
 package com.example.demo5.service.impl;
 
 import com.alibaba.fastjson2.JSON;
-import com.xzl.wxbserver.api.WxbAccessTokenFeignApi;
-import com.xzl.wxbserver.common.constant.HeaderConstant;
-import com.xzl.wxbserver.common.constant.RedisConstant;
-import com.xzl.wxbserver.common.constant.UrlConstant;
-import com.xzl.wxbserver.pojo.query.WxbSdkQuery;
-import com.xzl.wxbserver.pojo.response.RpcResult;
-import com.xzl.wxbserver.service.IWxbAuthService;
+import com.example.demo5.api.WxbAccessTokenFeignApi;
+import com.example.demo5.common.constant.HeaderConstant;
+import com.example.demo5.common.constant.RedisConstant;
+import com.example.demo5.common.constant.UrlConstant;
+import com.example.demo5.pojo.query.WxbSdkQuery;
+import com.example.demo5.pojo.response.RpcResult;
+import com.example.demo5.service.IWxbAuthService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.redisson.api.RBucket;

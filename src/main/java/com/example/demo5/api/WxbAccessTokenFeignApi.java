@@ -1,8 +1,9 @@
 package com.example.demo5.api;
 
-import com.xzl.wxbserver.common.config.WxbMallFeignConfig;
-import com.xzl.wxbserver.pojo.query.WxbSdkQuery;
-import com.xzl.wxbserver.pojo.response.RpcResult;
+
+import com.example.demo5.common.config.WxbMallFeignConfig;
+import com.example.demo5.pojo.query.WxbSdkQuery;
+import com.example.demo5.pojo.response.RpcResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

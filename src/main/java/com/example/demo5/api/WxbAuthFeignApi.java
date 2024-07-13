@@ -1,15 +1,15 @@
 package com.example.demo5.api;
 
 
-import com.xzl.wxbserver.common.config.WxbMallFeignConfig;
-import com.xzl.wxbserver.pojo.dto.IdAuthDTO;
-import com.xzl.wxbserver.pojo.dto.PlotLiftPageDTO;
-import com.xzl.wxbserver.pojo.dto.UnitMaintLiftStatDTO;
-import com.xzl.wxbserver.pojo.dto.UnitVerifyDTO;
-import com.xzl.wxbserver.pojo.query.PlotLiftQuery;
-import com.xzl.wxbserver.pojo.query.UnitLiftStatQuery;
-import com.xzl.wxbserver.pojo.response.Pager;
-import com.xzl.wxbserver.pojo.response.RpcResult;
+import com.example.demo5.common.config.WxbMallFeignConfig;
+import com.example.demo5.pojo.dto.IdAuthDTO;
+import com.example.demo5.pojo.dto.PlotLiftPageDTO;
+import com.example.demo5.pojo.dto.UnitMaintLiftStatDTO;
+import com.example.demo5.pojo.dto.UnitVerifyDTO;
+import com.example.demo5.pojo.query.PlotLiftQuery;
+import com.example.demo5.pojo.query.UnitLiftStatQuery;
+import com.example.demo5.pojo.response.Pager;
+import com.example.demo5.pojo.response.RpcResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -67,7 +67,7 @@ public interface WxbAuthFeignApi {
      */
     @RequestMapping(value = "/apiUser/idCardAuth/v2", method = RequestMethod.GET)
     RpcResult<IdAuthDTO> idCardAuth(@RequestParam("cardNo") String cardNo,
-                                           @RequestParam("realName") String realName);
+                                    @RequestParam("realName") String realName);
 
     /**
      * 检验单位名和统一信用代码
